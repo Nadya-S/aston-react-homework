@@ -7,14 +7,13 @@ class Form extends React.Component {
     super(props);
     this.name = React.createRef();
     this.state = { name: "" };
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.setState({ name: this.name.current.value });
-    console.log("submit", this.name.current.value, this.name.current);
-  }
+    console.log("submit", this.name.current.value, this.state);
+  };
 
   componentDidMount() {
     console.log("component did mount");
@@ -29,6 +28,7 @@ class Form extends React.Component {
   }
 
   render() {
+    const { name } = this.state;
     return (
       <section className="form-container">
         <h2 className="form_title">Welcome form</h2>
@@ -44,7 +44,7 @@ class Form extends React.Component {
             Отправить
           </button>
         </form>
-        {this.state.name ? <Greeting name={this.state.name} /> : <div></div>}
+        {name ? <Greeting name={name} /> : <div></div>}
       </section>
     );
   }
