@@ -1,5 +1,4 @@
 .form-container {
-  height: 100vh;
   padding: 20px;
 }
 
@@ -7,21 +6,39 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 50px auto;
+  margin: 40px auto;
   width: 40vw;
 }
 
-.form_input {
+.form__input {
   border: none;
   border-radius: 10px;
   height: 30px;
   padding-left: 10px;
 }
 
-.form_button {
+.form__input_title {
+  margin: 20px 0 10px 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.form__input_error {
+  display: none;
+}
+
+.form__input_error_active {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+  color: brown;
+  text-align: left;
+}
+
+.form__button {
   margin: 20px 0;
   border-radius: 10px;
   height: 30px;
-  border: 1px solid grey;
   color: rgb(70, 69, 69);
+  border: 1px solid rgb(255, 197, 80);
 }

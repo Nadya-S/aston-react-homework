@@ -1,0 +1,12 @@
+.list {
+  list-style-type: circle;
+  text-align: left;
+  margin-top: 25px;
+}
+
+.list__container {
+  background-color: rgb(255, 197, 80);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
